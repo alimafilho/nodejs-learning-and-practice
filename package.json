@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-learning-and-practice",
+  "version": "1.0.0",
+  "description": "Portal de noticias",
+  "main": "noticias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
