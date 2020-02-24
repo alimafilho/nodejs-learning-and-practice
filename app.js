@@ -1,20 +1,7 @@
-var express = require('express');
-var app = express();
+const app = require('./config/server');
 
-var msg = require('./mod_test');
+const rotaHome = require('./app/routes/home')(app);
+const rotaNoticias = require('./app/routes/noticias')(app);
+const rotaFormulario_inclusao_noticia = require('./app/routes/formulario_inclusao_noticia')(app);
 
-app.set('view engine', 'ejs');
-
-app.get('/', function(req, res){
-  res.render("home/index")
-});
-
-app.get('/formulario_inclisao_noticia', function(req, res){
-  res.render("admin/form_add_noticia")
-});
-
-app.get('/noticias', function(req, res){
-  res.render("noticias/noticias")
-});
-
-app.listen(3000, function () { console.log("Servidor rodando com express", msg()) })
+app.listen(3000, function () { console.log("Servidor rodando com express") })
